@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Changed path -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cybersecurity Attack Analysis Dashboard</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#eda">Exploratory Data Analysis</a></li>
+                <li><a href="#ml-models">Machine Learning Models</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="loading-spinner" class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading data and training models, please wait...</p>
+            </section>
+
+            <section id="eda" class="dashboard-section hidden">
+                <h2>Exploratory Data Analysis</h2>
+                <div class="eda-plots">
+                    <h3>Distribution of Attack Types</h3>
+                    <img id="label-distribution-plot" alt="Label Distribution Plot">
+
+                    <h3>Correlation Heatmap (Top 10 Features)</h3>
+                    <img id="correlation-heatmap-plot" alt="Correlation Heatmap Plot">
+
+                    <h3>Feature Distributions</h3>
+                    <div id="feature-histograms" class="plot-grid">
+                        <!-- Histograms will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="ml-models" class="dashboard-section hidden">
+                <h2>Machine Learning Model Analysis</h2>
+
+                <div class="model-section">
+                    <h3>Random Forest Classifier</h3>
+                    <div id="rf-metrics" class="metrics-card">
+                        <p><strong>Accuracy:</strong> <span id="rf-accuracy"></span></p>
+                        <p><strong>Precision:</strong> <span id="rf-precision"></span></p>
+                        <p><strong>Recall:</strong> <span id="rf-recall"></span></p>
+                        <p><strong>F1-Score:</strong> <span id="rf-f1"></span></p>
+                    </div>
+                    <h4>Confusion Matrix</h4>
+                    <img id="rf-confusion-matrix" alt="Random Forest Confusion Matrix">
+                </div>
+
+                <div class="model-section">
+                    <h3>Logistic Regression</h3>
+                    <div id="lr-metrics" class="metrics-card">
+                        <p><strong>Accuracy:</strong> <span id="lr-accuracy"></span></p>
+                        <p><strong>Precision:</strong> <span id="lr-precision"></span></p>
+                        <p><strong>Recall:</strong> <span id="lr-recall"></span></p>
+                        <p><strong>F1-Score:</strong> <span id="lr-f1"></span></p>
+                    </div>
+                    <h4>Confusion Matrix</h4>
+                    <img id="lr-confusion-matrix" alt="Logistic Regression Confusion Matrix">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Cybersecurity Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script> <!-- Changed path -->
+</body>
+</html>

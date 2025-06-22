@@ -1,0 +1,226 @@
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8; /* Light off-white background */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #FFFFFF; /* White background for the main content area */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 0;
+}
+
+header {
+    background-color: #800000; /* Maroon */
+    color: #FFFFFF;
+    padding: 25px 30px;
+    text-align: center;
+    border-bottom: 5px solid #600000; /* Darker maroon border */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+nav {
+    background-color: #600000; /* Darker Maroon for nav */
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #A00000; /* Lighter maroon on hover/active */
+}
+
+main {
+    padding: 30px;
+}
+
+.dashboard-section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #FDFDFD;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-section h2 {
+    color: #800000; /* Maroon heading */
+    border-bottom: 2px solid #EEE;
+    padding-bottom: 15px;
+    margin-top: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.dashboard-section h3 {
+    color: #500000; /* Slightly darker maroon for subheadings */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.dashboard-section h4 {
+    color: #500000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.eda-plots, .model-section {
+    margin-top: 20px;
+}
+
+.plot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.metrics-card {
+    background-color: #FFF5F5; /* Very light maroon/pink */
+    border: 1px solid #E0B0B0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.metrics-card p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.metrics-card strong {
+    color: #800000;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #800000; /* Maroon */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 30px;
+    border-top: 5px solid #600000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px; /* Adjust as needed */
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #800000; /* Maroon spinner */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+    }
+
+    .dashboard-section {
+        padding: 15px;
+    }
+
+    .dashboard-section h2 {
+        font-size: 1.8em;
+    }
+
+    .dashboard-section h3 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    main {
+        padding: 15px;
+    }
+}
+
