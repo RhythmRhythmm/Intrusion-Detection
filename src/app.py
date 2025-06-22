@@ -19,7 +19,7 @@ warnings.filterwarnings("ignore")
 # Get the absolute path of the directory containing app.py
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 STATIC_FOLDER_PATH = os.path.join(BASE_DIR, 'static')
-DATA_FOLDER_PATH = os.path.join(BASE_DIR, 'data')
+DATA_FOLDER_PATH = os.path.join(BASE_DIR, '..', 'data')
 
 
 # Initialize Flask app with explicit static and template folder paths
