@@ -1,5 +1,5 @@
 import unittest
-from app import load_and_preprocess_data, train_models
+from src.app import load_and_preprocess_data, train_models
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 
 class TestIDSModelPipeline(unittest.TestCase):
@@ -23,3 +23,5 @@ class TestIDSModelPipeline(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
