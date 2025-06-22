@@ -40,7 +40,7 @@ label_encoder = None
 
 # Define a maximum number of rows to load to prevent MemoryError
 # The original dataset has ~2.8 million rows. Loading ~200k-500k should be sufficient for demonstration.
-MAX_ROWS_TO_LOAD = 500 # Adjust this value based on available RAM if needed
+MAX_ROWS_TO_LOAD = 20000 # Adjust this value based on available RAM if needed
 
 def load_and_preprocess_data():
     """
